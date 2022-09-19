@@ -1,14 +1,17 @@
 package com.khan.homework50.entity;
 
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
-
 import java.time.LocalDateTime;
 
 @Data
-@RequiredArgsConstructor
 public class Post {
     private String photo;
     private String description;
     private LocalDateTime postDateTime;
+
+    public Post(String photo, String description) {
+        this.photo = photo;
+        this.description = description;
+        this.postDateTime = LocalDateTime.now();
+    }
 }
